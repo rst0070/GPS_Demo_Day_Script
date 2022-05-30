@@ -33,15 +33,33 @@ $(async ()=>{
     }
 
     let toggleOption = {
-        display: "block"
+        duration: 500
     };
 
     let data = (await getScriptData()).data;
     insertContents(data);
 
+    $(".script_presenter").css(
+        {
+            background: "black",
+            color: "white"
+        }
+    )
+
     $(".bar").click((event)=>{
-        console.log(event);
-        $(event.currentTarget).siblings(".script_kr").toggle();
-        //$(event.target).parent().nextUntil(".script_kr").toggle();
+        let presenter = $(event.currentTarget).find(".script_presenter");
+        console.log(presenter.css("color"));
+        if(presenter.css("color") == "rgb(255, 255, 255)"){
+            presenter.css({
+                "background" : "white",
+                "color" : "black"
+            });
+        }else{
+            presenter.css({
+                "background" : "black",
+                "color" : "white"
+            });
+        }
+        $(event.currentTarget).siblings(".script_kr").toggle(toggleOption);
     })
 });
