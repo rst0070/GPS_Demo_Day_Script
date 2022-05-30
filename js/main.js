@@ -20,7 +20,7 @@ $(async ()=>{
     }
 
     async function getScriptData(){
-        return await $.ajax("/data/script_data.json");
+        return await $.ajax("/gps-demo-day-script/data/script_data.json");
     }
 
     function insertContents(scriptData){
