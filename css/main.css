@@ -49,14 +49,13 @@ body {
 }
 
 .content .bar p {
-    display: block;
+    display: inline-block;
     font-size: 20px;
     height: 24px;
     font-family: 'pangea';
     font-style: normal;
     font-weight: normal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    margin: 0;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 26px;
@@ -83,7 +82,8 @@ body {
 }
 
 .content .script_kr p {
-    margin: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
 
 .content .script_eng {
