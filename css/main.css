@@ -46,6 +46,7 @@ body {
 .content .bar {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+    overflow: auto;
 }
 
 .content .bar p {
